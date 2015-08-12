@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="css/jpreloader.css" />
 <link href="css/style.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/gallery.css" />
+<link rel="stylesheet" type="text/css" href="css/buttons.css" />
+
 <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
 <meta name="viewport" content="width=device-width, user-scalable=no">
 
@@ -97,6 +99,162 @@ $(".plus_photo").hide();
       <script src="js/html5shiv.js"></script>
     <![endif]-->
 <style>
+
+/* Common button styles */
+.button {
+	float: left;
+	min-width: 150px;
+	max-width: 250px;
+	display: block;
+	margin: 1em;
+	padding: 1em 2em;
+	border: none;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+}
+.lightbox_content{
+	background-color: #F9DBBD;
+	overflow-y: hidden; // hide vertical
+overflow-x: hidden; // hide horizontal
+
+}
+.button:focus {
+	outline: none;
+}
+
+.button > span {
+	vertical-align: middle;
+}
+
+/* Sizes */
+.button--size-s {
+	font-size: 14px;
+}
+
+.button--size-m {
+	font-size: 16px;
+}
+
+.button--size-l {
+	font-size: 18px;
+}
+
+/* Typography and Roundedness */
+.button--text-upper {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.button--text-thin {
+	font-weight: 300;
+}
+
+.button--text-medium {
+	font-weight: 500;
+}
+
+.button--text-thick {
+	font-weight: 600;
+}
+
+.button--round-s {
+	border-radius: 5px;
+}
+
+.button--round-m {
+	border-radius: 15px;
+}
+
+.button--round-l {
+	border-radius: 40px;
+}
+
+/* Borders */
+.button--border-thin {
+	border: 1px solid;
+}
+
+.button--border-medium {
+	border: 2px solid;
+}
+
+.button--border-thick {
+	border: 3px solid;
+}
+/* Itzel */
+.button--itzel {
+	border: none;
+	padding: 0px;
+	overflow: hidden;
+	width: 255px;
+}
+
+.button--itzel::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 2px solid;
+	border-radius: inherit;
+	-webkit-clip-path: polygon(0% 0%, 0% 100%, 35% 100%, 35% 60%, 65% 60%, 65% 100%, 100% 100%, 100% 0%);
+	clip-path: url(../index.html#clipBox);
+	transform: translate3d(0, 100%, 0) translate3d(0, -2px, 0);
+	transform-origin: 50% 100%;
+}
+
+.button--itzel.button--border-thin::before {
+	border: 1px solid;
+	transform: translate3d(0, 100%, 0) translate3d(0, -1px, 0);
+}
+
+.button--itzel.button--border-thick::before {
+	border: 3px solid;
+	transform: translate3d(0, 100%, 0) translate3d(0, -3px, 0);
+}
+
+.button--itzel::before,
+.button--itzel .button__icon {
+	transition: transform 0.3s;
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.button--itzel .button__icon {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	padding: 20px;
+	font-size: 20px;
+	transform: translate3d(-50%, 0, 0);
+}
+
+.button--itzel > span {
+	display: block;
+	padding: 20px;
+	transition: transform 0.3s, opacity 0.3s;
+	transition-delay: 0.3s;
+}
+
+.button--itzel:hover::before {
+	transform: translate3d(0, 0, 0);
+}
+
+.button--itzel:hover .button__icon {
+	transition-delay: 0.1s;
+	transform: translate3d(-50%, -100%, 0);
+}
+
+.button--itzel:hover > span {
+	opacity: 0;
+	transform: translate3d(0, -50%, 0);
+	transition-delay: 0s;
+}
+
+
 .pointer_info .pointer_extra
 {
 	color: #7d756d;
@@ -254,6 +412,7 @@ $(document).ready(function(e) {
 Blah blah blah
  </p>
         <h2> Breeze on</h2>
+
         <div class="intro_controls"></div>
     </div>
 </section>
@@ -433,15 +592,21 @@ Blah blah blah
     <div class="header_banner_name">Hola!!</div>
 </section>
 <section class="delhi_section section-16 section-contact">
-  <!--  <div class="contact_container">
-     <!--   <div class="author_pic"><img src="images/tapan_babbar.jpg" width="100%"  /></div> -->
-        <div class="contact_name">Website Team | Breeze 2015</div>
+
+		<div class="contact_container">
+       <div class="author_pic"><img src="images/tapan_babbar.jpg" width="100%"  /></div>
+        <div class="contact_name">Sponsor 1</div>
         <div class="contact_info">
-            <p>Made By Us :)</p>
-    <!-- Add the about us team page link here !-->
+            <!--<p>Made By Us :)</p>
+
+     Add the about us team page link here
+		 !-->
         </div>
+
+
     </div>
-!-->
+
+
 
 </section>
 <div class="nav_mobile">
@@ -467,7 +632,7 @@ Blah blah blah
                 <div class="pointer_thumb"><img src="images/tomaras/tomaras_thumb.jpg" width="92" height="86" /></div>
                 <div class="pointer_info">
                     <h1>club 1</h1>
-                    <p>  </p>
+                    <p> ( 736 AD-1180 AD ) </p>
                     <p class="pointer_extra"> Click to exlore history </p>
                 </div>
             </li>
@@ -475,7 +640,7 @@ Blah blah blah
                 <div class="pointer_thumb"><img src="images/chauhans/chauhan_thumb.jpg" width="92" height="86" /></div>
                 <div class="pointer_info">
                     <h1>club 2</h1>
-                    <p>  </p>
+                    <p> ( 1180 AD - 1192 AD ) </p>
                    <p class="pointer_extra">  Click to exlore history </p>
                 </div>
             </li>
@@ -483,7 +648,7 @@ Blah blah blah
                 <div class="pointer_thumb"><img src="images/mamluks/mamluk_thumb.jpg" width="92" height="86" /></div>
                 <div class="pointer_info">
                     <h1>club 3</h1>
-                    <p>  </p>
+                    <p> ( 1192 AD - 1289 AD ) </p>
                     <p class="pointer_extra"> Click to exlore history </p>
                 </div>
             </li>
@@ -491,7 +656,7 @@ Blah blah blah
                 <div class="pointer_thumb"><img src="images/khilji/khilji_thumb.jpg" width="92" height="86" /></div>
                 <div class="pointer_info">
                     <h1>club 4</h1>
-                    <p>  </p>
+                    <p> ( 1290 AD - 1320 AD ) </p>
                     <p class="pointer_extra">  Click to exlore history </p>
                 </div>
             </li>
@@ -499,7 +664,7 @@ Blah blah blah
                 <div class="pointer_thumb"><img src="images/tughlaq/tughlaq_thumb.jpg" width="92" height="86" /></div>
                 <div class="pointer_info">
                     <h1>club 5</h1>
-                    <p>  </p>
+                    <p> ( 1320 AD - 1413 AD ) </p>
                    <p class="pointer_extra">  Click to exlore history </p>
                 </div>
             </li>
@@ -507,7 +672,7 @@ Blah blah blah
                 <div class="pointer_thumb"><img src="images/sayiadd/sayiadd_thumb.jpg" width="92" height="86" /></div>
                 <div class="pointer_info">
                     <h1>club 6</h1>
-                    <p>  </p>
+                    <p> ( 1414 AD - 1451 AD ) </p>
                    <p class="pointer_extra">  Click to exlore history </p>
                 </div>
             </li>
@@ -515,7 +680,7 @@ Blah blah blah
                 <div class="pointer_thumb"><img src="images/lodi/lodi_thumb.jpg" width="92" height="86" /></div>
                 <div class="pointer_info">
                     <h1>club 7</h1>
-                    <p>  </p>
+                    <p> ( 1451 AD - 1526 AD ) </p>
                     <p class="pointer_extra"> Click to exlore history </p>
                 </div>
             </li>
@@ -523,7 +688,7 @@ Blah blah blah
                 <div class="pointer_thumb"><img src="images/mughal-1/mughal-1_thumb.jpg" width="92" height="86" /></div>
                 <div class="pointer_info">
                     <h1>club 8</h1>
-                    <p>  </p>
+                    <p> ( 1526 AD - 1540 AD ) </p>
                    <p class="pointer_extra">  Click to exlore history </p>
                 </div>
             </li>
@@ -531,7 +696,7 @@ Blah blah blah
                 <div class="pointer_thumb"><img src="images/suri/suri_thumb.jpg" width="92" height="86" /></div>
                 <div class="pointer_info">
                     <h1>club 9</h1>
-                    <p>  </p>
+                    <p> ( 1540 AD - 1556 AD ) </p>
                   <p class="pointer_extra">  Click to exlore history </p>
                 </div>
             </li>
@@ -539,7 +704,7 @@ Blah blah blah
                 <div class="pointer_thumb"><img src="images/mughal-2/mughal-2_thumb.jpg" width="92" height="86" /></div>
                 <div class="pointer_info">
                     <h1>club 10</h1>
-                    <p>  </p>
+                    <p> ( 1556 AD - 1857 AD ) </p>
                     <p class="pointer_extra">  Click to exlore history </p>
                 </div>
             </li>
@@ -547,7 +712,7 @@ Blah blah blah
                 <div class="pointer_thumb"><img src="images/british/british_thumb.jpg" width="92" height="86" /></div>
                 <div class="pointer_info">
                     <h1>club 11</h1>
-                    <p>  </p>
+                    <p> ( 1857 AD - 1947 AD ) </p>
                    <p class="pointer_extra">  Click to exlore club </p>
                 </div>
             </li>
@@ -555,7 +720,7 @@ Blah blah blah
                 <div class="pointer_thumb"><img src="images/british/ieee.jpg" width="92" height="86" /></div>
                 <div class="pointer_info">
                     <h1>club 12</h1>
-                    <p>  </p>
+                    <p> ( 1857 AD - 1947 AD ) </p>
                    <p class="pointer_extra">  Click to exlore club </p>
                 </div>
             </li>
@@ -563,7 +728,7 @@ Blah blah blah
                 <div class="pointer_thumb"><img src="images/british/mech.jpg" width="92" height="86" /></div>
                 <div class="pointer_info">
                     <h1>club 13</h1>
-                    <p>  </p>
+                    <p> ( 1857 AD - 1947 AD ) </p>
                    <p class="pointer_extra">  Click to exlore club </p>
                 </div>
             </li>
@@ -571,7 +736,7 @@ Blah blah blah
                 <div class="pointer_thumb"><img src="images/british/orion.png" width="92" height="86" /></div>
                 <div class="pointer_info">
                     <h1>club 14</h1>
-                    <p>  </p>
+                    <p> ( 1857 AD - 1947 AD ) </p>
                    <p class="pointer_extra">  Click to exlore club </p>
                 </div>
             </li>
@@ -579,7 +744,7 @@ Blah blah blah
                 <div class="pointer_thumb"><img src="images/british/snu-acm.jpg" width="92" height="86" /></div>
                 <div class="pointer_info">
                     <h1>club 15</h1>
-                    <p>  </p>
+                    <p> ( 1857 AD - 1947 AD ) </p>
                    <p class="pointer_extra">  Click to exlore club </p>
                 </div>
             </li>
@@ -628,8 +793,8 @@ Blah blah blah
 			<li></li>
         </ul>
         <div class="bar_bar"></div>
-      <!--  <ul class="year_bar">
-            <li>2015</li>
+        <ul class="year_bar">
+          <!--  <li>2015</li>
             <li>800 AD</li>
             <li>900 AD</li>
             <li>1000 AD</li>
@@ -641,10 +806,11 @@ Blah blah blah
             <li>1600 AD</li>
             <li>1700 AD</li>
             <li>1800 AD</li>
+
             <li class="next_last">1900 AD</li>
             <li class="last">2000 AD</li>
+						!-->
         </ul>
-				
     </div>
 </section>
 <footer class="trans">
@@ -743,9 +909,9 @@ Blah blah blah
                 <div class="info_cover_divide"></div>
                 <div class="info_cover_captial">Events</div>
                 <div class="info_cover_captial_ruler">
-                    <button id="b_c3_e1"><h1>Singularity </h1></button><br>
-                    <button id="b_c3_e2"><h1>Twin Paradox </h1></button><br>
-					<button id="b_c3_e3"><h1>Time Warpers </h1></button><br>
+										<button class="button button--wayra button--border-thin button--round-s" id="b_c3_e1">Singularity</button>
+										<button class="button button--wayra button--border-thin button--round-s" id="b_c3_e2">Twin Paradox</button>
+										<button class="button button--wayra button--border-thin button--round-s" id="b_c3_e3">Time Warpers</button>
                 </div>
             </div>
         </div>
