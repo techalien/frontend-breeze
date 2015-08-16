@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Breeze2K15 about</title>
+		<link href='http://fonts.googleapis.com/css?family=Flamenco' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/slideshow.css" />
+		<script src="js/snap.svg-min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<style>
+			.icon{
+				border-radius: 50%;
+				width: 400px;
+				height: 200px;
+			}
+			.logo{
+				width:300px;
+				height:150px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		<div class="codrops-top clearfix">
+				
+				<span class="right">
+
+					
+
+					<a href="../index.html"><strong>Back to the main website</strong></a>
+
+				</span>
+			</div><!--/ Codrops top bar -->
+			<div id="slideshow" class="slideshow">
+				<ul>
+					<li>
+						<div class="slide">
+							<img class="icon" src="img/karan.jpg" alt=""/>
+							<blockquote>
+								<p>Web developer | High on Python | <br/> Pink Floyd Bhakt |<a href="http://blog.karansh.in"> Blog</a></p>
+							</blockquote>
+							<p>Karan</p>
+						</div>
+					</li>
+					
+					<li>
+						<div class="slide">
+							<img class="icon" src="img/vijay.jpg" alt=""/>
+							<blockquote>
+								<p>The travelling programmer who knows his stuff.</blockquote>
+							<p>Vijay</p>
+						</div>
+					</li>
+					<li>
+						<div class="slide">
+							<img class="icon" src="img/akhil.jpg" alt=""/>
+							<blockquote>
+								<p>A foot here, a foot there. Web dev in this case. C++ with a sprinkling of Java. <a href="http://www.techalien.in">techalien.in</a></p>
+							</blockquote>
+							<p>Akhil</p>
+						</div>
+					</li>
+					<li>
+						<div class="slide">
+							<img class="icon" src="img/pb.jpg" alt=""/>
+							<blockquote>
+								<p>Web Developer who goes by the motto "Deleted code is debugged code." </blockquote>
+							<p>Piyush</p>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		<script src="js/classie.js"></script>
+		<script src="js/sliderFx.js"></script>
+		<script>
+			(function() {
+				new SliderFx( document.getElementById('slideshow'), {
+					easing : 'cubic-bezier(.8,0,.2,1)'
+				} );
+			})();
+		</script>
+	</body>
+</html>

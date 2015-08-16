@@ -626,16 +626,16 @@ nav h1 {
 }
 
 .header_strip_1 {
-  background-color: #223767;
+  background-color: #40075A;
 }
 
 .header_strip_2 {
-  background-color: #171845;
+  background-color: #390547;
   height: 22px;
 }
 
 .header_strip_3 {
-  background-color: #171845;
+  background-color: #390547;
 }
 
 .header_banner_name {
@@ -1510,7 +1510,7 @@ footer {
 }
 
 .lightbox_content {
-  background-color: #e6e3db;
+  background-color: #200434 !important; 
   height: auto;
   min-height: 1050px;
   position: absolute;
