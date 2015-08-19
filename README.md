@@ -3,3 +3,6 @@
 
 Waffle link : 
 https://waffle.io/techalien/frontend-breeze
+
+##Deployed
+snu-breeze.com
